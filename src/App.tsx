@@ -7,7 +7,9 @@ import {
 } from './components'
 import {
   Home,
-  Test
+  People,
+  NotPage,
+  Schedule
 } from './routers'
 
 function App() {
@@ -15,10 +17,15 @@ function App() {
     <BrowserRouter>
         <Header/>
         <Aside/>
-        <Routes>
-          <Route path='/' element={<Home/>}/>
-          <Route path='/test' element={<Test/>}/>
-        </Routes>
+        <div className='pt-[110px] px-[50px] pb-[50px] w-[100%] max-w-[1920px]'>
+          <Routes>
+            <Route path='/' element={<Home/>}/>
+            <Route path='/people/:id' element={<People/>}/>
+            <Route path='/schedule' element={<Schedule/>}/>
+            <Route path='*' element={<NotPage/>}/>
+          </Routes>
+        </div>
+        
     </BrowserRouter>
   );
 }

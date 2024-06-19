@@ -1,7 +1,11 @@
 import Home from "./Home"
-import Test from "./Test"
+import Schedule from "./Schedule"
+import People from "./People"
+import NotPage from "./NotPage"
 
 export{
     Home,
-    Test   
+    People,
+    NotPage,
+    Schedule   
 }
