@@ -3,5 +3,5 @@ import Aside from "./Aside"
 
 export{
     Header,
-    Aside
+    Aside,
 }
