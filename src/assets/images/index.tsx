@@ -1,5 +1,5 @@
 import logo from "./logo.svg"
-import peopleImg from "./people.svg"
+import peopleImg from "./people.webp"
 
 export{
     logo,
