@@ -1,31 +1,26 @@
 import React from 'react';
 import {peopleImg} from '../assets/images/index'
-import { InputComponent, RadioComponent } from '../components';
-
-const INITIAL_STATE={
-  id: '',
-  name: '',
-  english_name: '',
-  address: ''
-}
+import { InputComponent, RadioComponent, InputDateComponent, SelectComponent,AddressComponent } from '../components';
 
 const People = () => {
-  const sex = ['남', '여']
-
   return (
     <div>
       <section className=''>
         <figure className='flex justify-around'>
           <img src={peopleImg} alt='test' className='w-[300px] h-[300px] object-contain'/>
           <figcaption className='w-[48%] flex flex-wrap h-fit'>
-            <InputComponent title='번호' value={1} />
-            <InputComponent title='성명' value='홍길동' />
-            <InputComponent title='영문성명' value='Hong gil dong' />
-            <InputComponent title='생년월일' value='2000.12.31' />
-            <InputComponent title='생년월일' value='2000.12.31' />
-            <InputComponent title='생년월일' value='2000.12.31' />
-            <InputComponent title='생년월일' value='2000.12.31' />
-            <RadioComponent title='생년월일' value={sex} />
+            <InputComponent name='id' title='번호'/>
+            <InputComponent name='name' title='성명' />
+            <InputDateComponent name='birth' title='생년월일'/>
+            <RadioComponent name="gender" title='성별'/>
+            <RadioComponent name="calendarType" title='양/음'/>
+            <InputDateComponent name='registration' title='등록일'/>
+            <SelectComponent name="maritalStatus" title='결혼유무'/>
+            <SelectComponent name="position" title='직책'/>
+            <SelectComponent name="department" title='부서'/>
+            <InputComponent name='phone1' title='연락처1' />
+            <InputComponent name='phone2' title='연락처2' />
+            <AddressComponent name='phone2' title='주소' />
           </figcaption>
         </figure>
         

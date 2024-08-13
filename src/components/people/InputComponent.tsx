@@ -1,21 +1,27 @@
-import React, { useState } from 'react';
-
-interface InputComponentProps {
-    title: string;
-    value: string|number;
-  }
+import React from 'react';
+import { useSelector, useDispatch } from "react-redux"
+import { changeInputVal } from '../../store/InputComponent/InputComponentVal';
+import { peopleInputProps } from '../../types/PeopleTypes';
 
 
-const InputComponent: React.FC<InputComponentProps> = (props) => {
-    const [val, setVal] = useState(props.value)
+const InputComponent: React.FC<peopleInputProps> = ({title, name}) => {
+  const InputComponentVal = useSelector((state:any)=>state.InputComponentVal)
+  const dispatch = useDispatch();
+  const value = InputComponentVal[name];
     const inputChangeHandle = (e:any) => {
-        setVal(e.target.value);
-      };
+      dispatch(changeInputVal({ [name] : e.target.value}));
+    };
   return (
-    <dl className=''>
-        <dt><label>{props.title}</label></dt>
+    <dl>
+        <dt><label>{title}</label></dt>
         <dd className='mt-[5px]'>
-          <input type='text' value={val} className='w-[300px] border-[1px] border-color-gray-300 p-[5px] rounded-md ' onChange={inputChangeHandle}/>
+          <input
+            className='w-[300px] border-[1px] border-color-gray-300 p-[5px] rounded-md ' 
+            type='text'
+            value={value}
+            onChange={inputChangeHandle}
+            name={name}
+          />
         </dd>
     </dl>
   );
