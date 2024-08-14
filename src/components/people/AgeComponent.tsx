@@ -30,7 +30,7 @@ const AgeComponent = () => {
   const age = calculateAge(InputComponentVal.birth);
 
   return (
-    <span>
+    <span className='font-black'>
       ({age}세)
     </span>
   );

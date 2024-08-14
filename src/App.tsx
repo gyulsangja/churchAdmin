@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Routes, Route, BrowserRouter } from 'react-router-dom';
 import './App.css';
 import {
@@ -14,20 +14,33 @@ import {
 } from './routers'
 
 function App() {
+  const [isExpanded, setIsExpanded] = useState(true);
+
+  const toggleAsideWidth = () => {
+    setIsExpanded(!isExpanded);
+  };
+
+  const asideWidth = isExpanded ? '260px' : '60px';
+  const mainWidth = isExpanded ? 'calc(100% - 260px)' : 'calc(100% - 60px)';
   return (
     <BrowserRouter>
         <Header/>
         <div className='w-[100%] flex'>
-          <Aside/>
-          <div className='pt-[110px] px-[50px] pb-[50px] w-[100%] max-w-[1200px]'>
+          <aside className='h-dvh bg-[#efefef]' style={{ width: asideWidth }}>
+            <Aside/>
+            <button onClick={toggleAsideWidth}>
+              {isExpanded ? 'Shrink' : 'Expand'}
+            </button>
+          </aside>
+          <main className='pt-[90px] px-[30px] pb-[30px]' style={{ width: mainWidth }}>
             <Routes>
               <Route path='/' element={<Home/>}/>
               <Route path='/people/:id' element={<People/>}/>
-              <Route path='/PeopleList' element={<PeopleList/>}/>
+              <Route path='/People' element={<PeopleList/>}/>
               <Route path='/schedule' element={<Schedule/>}/>
               <Route path='*' element={<NotPage/>}/>
             </Routes>
-          </div>
+          </main>
         </div>
         
         

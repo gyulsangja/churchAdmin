@@ -13,14 +13,14 @@ const SelectComponent: React.FC<peopleInputProps> = ({title, name}) => {
         dispatch(changeInputVal({ [name] : e.target.value}));
     };
   return (
-    <dl>
-        <dt>{title}</dt>
-        <dd className='mt-[5px]'>
+    <>
+        <h3>{title}</h3>
+        <div className='mt-[5px]'>
             <select 
                 name={name}
                 onChange={handleChange}
                 value={val}
-                className='w-[300px] border-[1px] border-color-gray-300 p-[5px] rounded-md '
+                className='border-[1px] border-color-gray-300 p-[5px] rounded-md '
             >
             {
                 vals.map((i:any, index:number)=>(
@@ -29,8 +29,8 @@ const SelectComponent: React.FC<peopleInputProps> = ({title, name}) => {
                 ))
             }
             </select>
-        </dd>
-    </dl>
+        </div>
+    </>
   );
 }
 

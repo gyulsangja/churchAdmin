@@ -1,16 +1,12 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Aside = () => {
   return (
-    <aside className='h-dvh bg-[#efefef] max-w-[260px] w-[100%]'>
-      <ul className='pt-[60px]'>
-        <li><a href='#none'>test</a></li>
-        <li><a href='#none'>test</a></li>
-        <li><a href='#none'>test</a></li>
-        <li><a href='#none'>test</a></li>
-        <li><a href='#none'>test</a></li>
-      </ul>
-    </aside>
+    <ul className='pt-[60px]'>
+      <li><Link to="/people/1">people1</Link></li>
+      <li><Link to="/people">people</Link></li>
+    </ul>
   );
 }
 

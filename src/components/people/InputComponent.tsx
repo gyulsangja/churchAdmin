@@ -12,18 +12,18 @@ const InputComponent: React.FC<peopleInputProps> = ({title, name}) => {
       dispatch(changeInputVal({ [name] : e.target.value}));
     };
   return (
-    <dl>
-        <dt><label>{title}</label></dt>
-        <dd className='mt-[5px]'>
+    <>
+        <h3><label>{title}</label></h3>
+        <div className='mt-[5px]'>
           <input
-            className='w-[300px] border-[1px] border-color-gray-300 p-[5px] rounded-md ' 
+            className='w-full border-[1px] border-color-gray-300 p-[5px] rounded-md ' 
             type='text'
             value={value}
             onChange={inputChangeHandle}
             name={name}
           />
-        </dd>
-    </dl>
+        </div>
+    </>
   );
 }
 

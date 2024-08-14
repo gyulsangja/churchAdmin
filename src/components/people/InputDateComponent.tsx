@@ -24,25 +24,25 @@ const InputDateComponent: React.FC<peopleInputProps> = ({title, name}) => {
     };
 
   return (
-    <dl>
-        <dt>
+    <>
+        <h3>
             <label>
                 {title}
                 {
                     name === 'birth' ? <AgeComponent /> : ''            
                 }
             </label>
-        </dt>
-        <dd className='mt-[5px]'>
+        </h3>
+        <div className='mt-[5px]'>
             <DatePicker 
-                className='w-[300px] border-[1px] border-color-gray-300 p-[5px] rounded-md '
+                className='w-full border-[1px] border-color-gray-300 p-[5px] rounded-md '
                 selected={value}
                 onChange={handleDateChange}
                 dateFormat="yyyy-MM-dd"
             />
-        </dd>
+        </div>
         
-    </dl>
+    </>
   );
 }
 

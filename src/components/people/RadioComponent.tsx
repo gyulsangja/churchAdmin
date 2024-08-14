@@ -13,9 +13,9 @@ const RadioComponent: React.FC<peopleInputProps> = ({ title, name }) => {
     dispatch(changeInputVal({ [name] : e.target.value}));
   };
   return (
-    <dl>
-        <dt>{title}</dt>
-        <dd className='mt-[5px]'>
+    <>
+        <h3>{title}</h3>
+        <div className='mt-[5px] leading-8'>
             {
                 vals.map((i:any, index:number)=>(
                     
@@ -31,8 +31,8 @@ const RadioComponent: React.FC<peopleInputProps> = ({ title, name }) => {
                     
                 ))
             }
-        </dd>
-    </dl>
+        </div>
+    </>
   );
 }
 

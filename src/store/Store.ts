@@ -5,6 +5,6 @@ import RadioComponentValsReducer from './InputComponent/RadioComponentVals'
 export const Store = configureStore({
   reducer:{
     InputComponentVal : InputComponentValReducer,
-    RadioComponentVals : RadioComponentValsReducer
+    RadioComponentVals : RadioComponentValsReducer,
   }
 })
