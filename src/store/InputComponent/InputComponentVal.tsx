@@ -9,14 +9,14 @@ const initialState: peopleInputState = {
     calendarType: '음력',
     registration: '2000-12-31',
     maritalStatus: '미혼',
-    position: '과장',
-    department: '영업부',
-    department2: '동아리4',
+    position: '목사',
+    department: '교역자/직원',
+    department2: null,
     phone1: '010-1234-5678',
     phone2: '010-1234-5678',
-    spouse: '전지현',
-    address1: '서울 구로구 디지털로31길 62 구로동, 아티스포럼',
-    address2: '301호, 302호, 303호 주식회사 엘엑스',
+    spouse: '심청이',
+    address1: '서울 강서구 강서로 532 가양동, 동신아파트,대아아파트',
+    address2: '대중교회',
     note: `
     기타 비고란입니다.
     테스트죠.
