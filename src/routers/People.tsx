@@ -57,7 +57,7 @@ const People = () => {
             <li>히스토리</li>
             <li>직장/학력</li>
             <li>자유항목</li>
-            <li>새</li>
+            <li>새가족</li>
           </ul>
         </nav>
         <section>

@@ -4,7 +4,7 @@ import {PeopleList} from '../../routers'
 const ResizableDiv = () => {
   const [isResizing, setIsResizing] = useState(false);
   const [initialX, setInitialX] = useState(0);
-  const [width, setWidth] = useState(400);
+  const [width, setWidth] = useState(350);
 
   const handleMouseDown = (e:any) => {
     e.preventDefault();
@@ -47,7 +47,7 @@ const ResizableDiv = () => {
         <PeopleList/>
       </div>
       <div
-        className="w-1.5 bg-gray-300 cursor-col-resize hover:bg-gray-400 mx-[35px]"
+        className="w-1.5 bg-gray-300 cursor-col-resize hover:bg-gray-400 mx-[20px]"
         onMouseDown={handleMouseDown}
       />
     </div>
