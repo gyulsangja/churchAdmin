@@ -16,9 +16,10 @@ import {
 function App() {
   return (
     <BrowserRouter>
-        <Header/>
-        <main className='flex'>
-          <Aside/>
+      <Aside/>
+      <Header/>
+      <div className='pl-[88px]'>
+        <main className='p-[100px] min-h-dvh'>
           <Routes>
             <Route path='/' element={<Home/>}/>
             <Route path='/people/:id' element={<People/>}/>
@@ -26,7 +27,9 @@ function App() {
             <Route path='/schedule' element={<Schedule/>}/>
             <Route path='*' element={<NotPage/>}/>
           </Routes>
-        </main>     
+        </main>        
+      </div>
+         
     </BrowserRouter>
   );
 }

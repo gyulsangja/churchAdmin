@@ -11,7 +11,7 @@ import {
 const Aside = () => {
 
   return (
-    <aside className='h-dvh bg-asideBg'>
+    <aside className='h-dvh bg-asideBg dark:bg-asideBgDark fixed w-[88px]'>
       <ul className='pt-[60px]'>
         <li>
           <Link to='/'>
