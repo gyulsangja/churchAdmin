@@ -8,7 +8,8 @@ import {
   SelectComponent,
   AddressComponent,
   TextareaComponent,
-  ResizableDiv
+  ResizableDiv,
+  DetailNavComponet
 } from '../components';
 
 const People = () => {
@@ -37,8 +38,8 @@ const People = () => {
               <li className='w-full'></li>
           
               <li className='mr-[10px] mb-[15px]'><SelectComponent name="position" title='직책'/></li>
-              <li className='mr-[10px] mb-[15px]'><SelectComponent name="department" title='부서'/></li>
-              <li className='mr-[10px] mb-[15px]'><SelectComponent name="department2" title='동아리'/></li>
+              <li className='mr-[10px] mb-[15px]'><SelectComponent name="department" title='전도회'/></li>
+              <li className='mr-[10px] mb-[15px]'><SelectComponent name="department2" title='목장'/></li>
               <li className='mr-[10px] mb-[15px]'><InputDateComponent name='registration' title='등록일'/></li>
 
               <li className='mr-[10px] mb-[15px]'><InputComponent name='phone1' title='연락처1' /></li>
@@ -50,16 +51,7 @@ const People = () => {
               <li className='w-full mb-[15px]'><TextareaComponent name='note' title='비고' /></li>
             </ul>
         </section>
-        <nav>
-          <ul className='flex'>
-            <li>주요신상</li>
-            <li>가족</li>
-            <li>히스토리</li>
-            <li>직장/학력</li>
-            <li>자유항목</li>
-            <li>새가족</li>
-          </ul>
-        </nav>
+        <DetailNavComponet/>
         <section>
           
         </section>

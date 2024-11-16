@@ -8,6 +8,7 @@ import SelectComponent from "./people/SelectComponent"
 import AddressComponent from "./people/AddressComponent"
 import TextareaComponent from "./people/TextareaComponent"
 import ResizableDiv from "./people/ResizableDiv"
+import DetailNavComponet from "./people/DetailNavComponet"
 
 export{
     Header,
@@ -21,7 +22,8 @@ export{
     AgeComponent,
     AddressComponent,
     TextareaComponent,
-    ResizableDiv
+    ResizableDiv,
+    DetailNavComponet
     
     
 
