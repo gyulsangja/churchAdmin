@@ -37,8 +37,13 @@ const People = () => {
               <li className='mb-[15px] w-[150px]'><InputComponent name='spouse' title='배우자' /></li>
               <li className='w-full'></li>
           
+<<<<<<< HEAD
               <li className='mr-[10px] mb-[15px]'><SelectComponent name="position" title='직책'/></li>
               <li className='mr-[10px] mb-[15px]'><SelectComponent name="department" title='전도회'/></li>
+=======
+              <li className='mr-[10px] mb-[15px]'><SelectComponent name="position" title='직분'/></li>
+              <li className='mr-[10px] mb-[15px]'><SelectComponent name="department" title='부서'/></li>
+>>>>>>> d5dbf4a5a841b05319af208aa4ca08496b499fa1
               <li className='mr-[10px] mb-[15px]'><SelectComponent name="department2" title='목장'/></li>
               <li className='mr-[10px] mb-[15px]'><InputDateComponent name='registration' title='등록일'/></li>
 
