@@ -1,5 +1,3 @@
-const { light } = require('@mui/material/styles/createPalette');
-
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
@@ -9,7 +7,7 @@ module.exports = {
   theme: {
     extend: {
       colors:{
-        point: '#6442d',
+        point: '#6442d6',
         secbg: '#f8f1f6',
         asideBg: '#f2ecee',
         btnBg: '#dcdaf5',
@@ -26,46 +24,26 @@ module.exports = {
         btnHoverBgDark: '#2d2c2e',
         btnPointBgDark: '#553f5d',
         fontColorDark: '#e6e1e3'
-
-
-        // point: {
-        //   light: '#6442d',
-        //   dark: '#9f86ff'
-        // },
-        // secbg: {
-        //   light: '#f8f1f6',
-        //   dark: '#1c1b1d'
-        // },
-        // asideBg: {
-        //   light: '#f2ecee',
-        //   dark: '#211f21'
-        // },
-        // btnBg: {
-        //   light: '#dcdaf5',
-        //   dark: '#45455a'
-        // },
-        // btnHoverBg: {
-        //   light: '#e5dee2',
-        //   dark: '#2d2c2e'
-        // },
-        // btnPointBg:{
-        //   light: '#f1d3f9',
-        //   dark: '#553f5d'
-        // },
-        // fontColor: {
-        //   light: '#1c1b1d',
-        //   dark: '#e6e1e3'
-        // },
-        // light: '#fff',
-        // dark: '#000',
       },
+      transitionTimingFunction: {
+        custom: 'cubic-bezier(0.2, 0, 0, 1)',
+      },
+      transitionDuration: {
+        200: '200ms',
+      },
+
       fontFamily:{
-        sans: ['Poppins', 'Pretendard', 'sans-serif'],
+        sans: ['Pretendard', 'Poppins', 'sans-serif'],
       },
       boxShadow:{
         custome: 'rgba(0, 0, 0, 0.15) 0px 2px 4px 0px, rgba(0, 0, 0, 0.08) 0px 0px 2px 0px'
       }
 
+    },
+    variants: {
+      extend: {
+        transitionProperty: ['hover', 'focus'],
+      },
     },
   },
   plugins: [],
