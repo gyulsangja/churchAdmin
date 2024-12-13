@@ -1,11 +1,11 @@
 import React from 'react';
 
-const Test = () => {
+const Church = () => {
   return (
     <div>
-      test
+      dashboard
     </div>
   );
 }
 
-export default Test;
+export default Church;

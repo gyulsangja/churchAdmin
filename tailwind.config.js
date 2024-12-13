@@ -3,17 +3,21 @@ module.exports = {
   content: [
     "./src/**/*.{js,jsx,ts,tsx}",
   ],
-  darkMode: 'selector',
+  // darkMode: 'selector',
   theme: {
     extend: {
+      fontSize:{
+        base: '1rem',
+      },
       colors:{
         point: '#6442d6',
-        secbg: '#f8f1f6',
+        secBg: '#f8f1f6',
         asideBg: '#f2ecee',
         btnBg: '#dcdaf5',
         btnHoverBg: '#e5dee2',
         btnPointBg: '#f1d3f9',
         fontColor:  '#1c1b1d',
+        lightGray: '#efefef',
         light: '#fff',
         dark: '#000',
 
@@ -33,7 +37,7 @@ module.exports = {
       },
 
       fontFamily:{
-        sans: ['Pretendard', 'Poppins', 'sans-serif'],
+        sans: ['Poppins', 'Pretendard', 'sans-serif'],
       },
       boxShadow:{
         custome: 'rgba(0, 0, 0, 0.15) 0px 2px 4px 0px, rgba(0, 0, 0, 0.08) 0px 0px 2px 0px'

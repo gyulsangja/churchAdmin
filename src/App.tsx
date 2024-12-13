@@ -10,7 +10,9 @@ import {
   People,
   PeopleList,
   NotPage,
-  Schedule
+  Schedule,
+  Organization
+
 } from './routers'
 
 function App() {
@@ -18,10 +20,13 @@ function App() {
     <BrowserRouter>
       <Aside/>
       <Header/>
-      <div className='pl-[88px]'>
-        <main className='p-[100px] min-h-dvh'>
+      <div className='pl-[80px]'>
+        <main className='px-[30px] pb-[30px] pt-[90px] min-h-dvh'>
           <Routes>
             <Route path='/' element={<Home/>}/>
+            <Route path='/organization' element={<Organization/>}/>
+            <Route path='/organization/:id' element={<Organization/>}/>
+            <Route path='/organization/:id/:subId' element={<Organization/>}/>
             <Route path='/people/:id' element={<People/>}/>
             <Route path='/People' element={<PeopleList/>}/>
             <Route path='/schedule' element={<Schedule/>}/>
