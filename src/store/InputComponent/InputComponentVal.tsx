@@ -17,11 +17,9 @@ const initialState: peopleInputState = {
     spouse: '박선경',
     address1: '서울 강서구 강서로 532 가양동, 동신아파트,대아아파트',
     address2: '대중교회',
-    note: `
-    기타 비고란입니다.
-    테스트죠.
-
-    `,
+    note: 
+    `기타 비고란입니다.
+    테스트죠.`,
 };
 
 const InputComponentVal = createSlice({

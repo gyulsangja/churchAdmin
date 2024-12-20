@@ -16,7 +16,7 @@ const Organization = () => {
   // URL 파라미터에 따른 선택된 항목을 찾기
   const selectedItem = organizationNavi.find((item: OrganizationNavItem) => item.id === Number(id));
   const selectedSubItem = selectedItem?.submenu?.find((sub: OrganizationSubItem) => sub.id === Number(subId));
-
+  
   return (
     <div className='flex justify-between'>
       <OrganizationNav
