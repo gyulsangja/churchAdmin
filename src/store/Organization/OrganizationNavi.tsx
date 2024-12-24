@@ -74,9 +74,12 @@ const OrganizationNavi = createSlice({
         id: newId,
         name: "새조직",
       });
+    },
+    delNavItem : (state, action: PayloadAction<number>)=>{
+      return state.filter(item => item.id !== action.payload);
     }
   },
 });
 
-export const { addNavItem } = OrganizationNavi.actions;
+export const { addNavItem, delNavItem } = OrganizationNavi.actions;
 export default OrganizationNavi.reducer;
