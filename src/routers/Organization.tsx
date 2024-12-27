@@ -1,7 +1,7 @@
 import React from 'react';
 import {useParams } from 'react-router-dom';
 import { useSelector } from 'react-redux';
-import { OrganizationNavItem, OrganizationSubItem } from '../types/OrganizationTypes';
+import { OrganizationNavItem} from '../types/OrganizationTypes';
 import {
   OrganizationNav,
   OrganizationList,
@@ -12,10 +12,9 @@ import {
 const Organization = () => {
   const { id, subId } = useParams(); // URL 파라미터에서 id와 subId 가져오기
   const organizationNavi = useSelector((state: any) => state.OrganizationNavi) as OrganizationNavItem[];
-
   // URL 파라미터에 따른 선택된 항목을 찾기
   const selectedItem = organizationNavi.find((item: OrganizationNavItem) => item.id === Number(id));
-  const selectedSubItem = selectedItem?.submenu?.find((sub: OrganizationSubItem) => sub.id === Number(subId));
+  const selectedSubItem = selectedItem?.submenu?.find((sub: OrganizationNavItem) => sub.id === Number(subId));
   
   return (
     <div className='flex justify-between'>

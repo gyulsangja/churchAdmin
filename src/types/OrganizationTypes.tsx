@@ -1,8 +1,4 @@
-export interface OrganizationSubItem {
-  id: number;
-  name: string;
-}
-  
+
 export interface OrganizationNavItem {
   id: number;
   name: string;
@@ -20,7 +16,7 @@ export interface OrganizationDetailProps {
 }
 
 export interface OrganizationSubDetailProps {
-  subItem: OrganizationSubItem;
+  subItem: OrganizationNavItem;
 }
 
 export interface addNavItem {
