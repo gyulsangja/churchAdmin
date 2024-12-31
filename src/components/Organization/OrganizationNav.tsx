@@ -131,13 +131,11 @@ const OrganizationNav: React.FC<OrganizationNavProps> = ({ organizationNavi, sel
                             e.preventDefault();
                             e.stopPropagation();
                             editNavItemInputHandle(item.id, item.name)
-                            // editNavItemHandle();
-                            //console.log('test')
                           }
                         }
                       >
                         <FontAwesomeIcon icon={faPenToSquare} />
-                        <p className='nameChange'>이름 바꾸기</p>
+                        <p className='nameChange'>이름 바꾸기{activeMenuId}</p>
                       </button>
                     </li>
                   </ul>
